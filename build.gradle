@@ -16,6 +16,9 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation platform('software.amazon.awssdk:bom:2.14.27')
+    implementation 'software.amazon.awssdk:appconfig'
+    implementation group: 'org.json', name: 'json', version: '20090211'
 }
 
 tasks.named('test') {

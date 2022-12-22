@@ -3,13 +3,13 @@
 	"tasks": [
 		{
 			"type": "gradle",
-			"id": "demo-springbuilddemo-spring",
+			"id": "venus-serverbuildvenus-server",
 			"script": "build",
 			"description": "Assembles and tests this project.",
 			"group": "build",
-			"project": "demo-spring",
+			"project": "venus-server",
 			"buildFile": "${workspaceFolder}/build.gradle",
-			"rootProject": "demo-spring", 
+			"rootProject": "venus-server",
 			"projectFolder": "${workspaceFolder}/",
 			"workspaceFolder": "${workspaceFolder}",
 			"args": "",

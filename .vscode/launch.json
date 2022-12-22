@@ -9,7 +9,7 @@
             "name": "Launch DemoSpringApplication",
             "request": "launch",
             "mainClass": "com.example.demospring.DemoSpringApplication",
-            "projectName": "demo-spring",
+            "projectName": "venus-server",
             "preLaunchTask": "gradle: build",
         }
     ]
