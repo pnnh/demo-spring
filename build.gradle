@@ -2,7 +2,6 @@ plugins {
     id 'java'
     id 'org.springframework.boot' version '3.0.0'
     id 'io.spring.dependency-management' version '1.1.0'
-    id 'org.graalvm.buildtools.native' version '0.9.18'
 }
 
 group = 'com.example'
@@ -14,13 +13,21 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'org.springframework.boot:spring-boot-starter-web' 
+    implementation group: 'javax.persistence', name: 'javax.persistence-api', version: '2.2'
+
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-validation', version: '3.0.0'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '3.0.0'  
+    implementation group: 'jakarta.validation', name: 'jakarta.validation-api', version: '3.0.2' 
+    implementation group: 'org.hibernate.validator', name: 'hibernate-validator', version: '8.0.0.Final'    
+    implementation group: 'org.springframework.boot', name: 'spring-boot-devtools', version: '3.0.0' 
+    implementation group: 'org.springframework', name: 'spring-context', version: '6.0.3' 
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc', version: '3.0.0'
+
     implementation platform('software.amazon.awssdk:bom:2.14.27')
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
     implementation 'software.amazon.awssdk:appconfig'
+    implementation group: 'org.postgresql', name: 'postgresql', version: '42.5.1'
     implementation group: 'org.json', name: 'json', version: '20090211'
 }
 
-tasks.named('test') {
-    useJUnitPlatform()
-}

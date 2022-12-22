@@ -11,6 +11,7 @@
             "mainClass": "com.example.demospring.DemoSpringApplication",
             "projectName": "venus-server",
             "preLaunchTask": "gradle: build",
+            "args": "--debug"
         }
     ]
 }
